@@ -15,8 +15,9 @@ addBtn.addEventListener("click", function() {
         listItem.classList.add("chosen");
         //remove marked item
         delBtn.addEventListener("click", function() {
-            let toRemove = document.getElementsByClassName(".chosen");
-            toRemove.remove();
+            if (confirm("Are you sure you want to delete an item?")) {
+            listItem.remove();
+            }
         }, false)
     }, false)
 
