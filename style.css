@@ -12,30 +12,25 @@ body {
     background-color: whitesmoke;
 }
 
-h1, form {
+h1, form, p {
     padding: 1rem;
-}
-
-p {
-    margin: 1rem;
-}
-
-button {
-    color: white;
-    background-color: red;
-    padding: 5px;
-    font-size: 1rem;
 }
 
 input[type="text"],input[type="button"] {
     width: 10rem;
     font-size: 1rem;
     padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-input[type="button"] {
-    color: white;
-    background-color: green;
+#addBtn {
+    color: rgb(249,249,249);
+    background-color: rgb(92,184,92);
+}
+
+#delBtn {
+    color: rgb(249,249,249);
+    background-color: rgb(217,83,79);
 }
 
 li {
@@ -45,4 +40,9 @@ li {
 
 li:nth-child(odd) {
     background-color: lightblue;
+}
+
+ul li.chosen {
+    background-color: yellow;
+    font-style: italic;
 }
