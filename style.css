@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: whitesmoke;
+}
+
+h1, form {
+    padding: 1rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+button {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"],input[type="button"] {
+    width: 10rem;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+input[type="button"] {
+    color: white;
+    background-color: green;
+}
+
+li {
+    height: 2rem;
+    padding: 1rem;
+}
+
+li:nth-child(odd) {
+    background-color: lightblue;
+}
