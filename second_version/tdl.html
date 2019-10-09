@@ -10,11 +10,30 @@
 </head>
 
 <body>
-    <div class="head">
-        <h1>To Do List</h1>
-        <input type="text" name="task" id="task">
-        <input type="button" value="Add" id="btnAdd">
-    </div>
+    <header>
+            <h1>Organizer</h1>
+    </header>
+    <nav class="head">
+        <div class="taskname">
+                <label for="task">What are you going to do?</label>
+                <input type="text" name="task" id="task">
+        </div>
+        <div class="start">
+            <label for="date">When would you start it?</label>
+            <input type="date" name="datetime" id="datedaystart">
+            <label for="">at</label>
+            <input type="time" name="time-start" id="time-start">
+        </div>
+        <div class="finish">
+                <label for="time">When shall you finish?</label>
+                <input type="date" name="datetime" id="datedayend">
+                <label for="">at</label>
+                <input type="time" name="time-end" id="time-end">
+        </div>
+        <div class="btn">
+                <input type="button" value="Add" id="btnAdd">
+        </div>
+    </nav>
     <ul id="tasks"></ul>
     <script src="tdl.js"></script>
 </body>
