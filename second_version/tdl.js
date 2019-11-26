@@ -4,39 +4,44 @@ function doneTask(e) {
 }
 
 function deleteTask(e) {
-    if (confirm("Have you completed the task?")){
-    e.target.parentElement.remove();
+    if (confirm("Have you completed the task?")) {
+        e.target.parentElement.remove();
     }
 }
 
 function addTask(e) {
-    let task  = document.getElementById("task");
+    let task = document.getElementById("task");
     let sDay = document.getElementById("datedaystart");
     let sTime = document.getElementById("time-start");
     let fDay = document.getElementById("datedayend");
     let fTime = document.getElementById("time-end");
 
-    let startDay = new Date(sDay.value).toLocaleDateString();
-    let finishDay = new Date(fDay.value).toLocaleDateString();
+    //creates a new task if form is filled
+    if (task.value != "" && sDay.value != "" && sTime.value != "" && fDay.value != "" && fTime.value != "") {
+        let startDay = new Date(sDay.value).toLocaleDateString();
+        let finishDay = new Date(fDay.value).toLocaleDateString();
 
-    let d = new Date();
-    let day = d.toLocaleDateString('en-GB');
-    let time = d.toLocaleTimeString();
+        let d = new Date();
+        let day = d.toLocaleDateString('en-GB');
+        let time = d.toLocaleTimeString();
 
-    let newTask = document.createElement("li"); //creates new element <li></li> (task)
-    newTask.innerHTML = `${task.value} (from ${sTime.value}, ${startDay} to 
+        let newTask = document.createElement("li"); //creates new element <li></li> (task)
+        newTask.innerHTML = `${task.value} (from ${sTime.value}, ${startDay} to 
         ${fTime.value}, ${finishDay}) 
         <span class="time">(added at ${day}, ${time})</span>`; //inserts printed text into li element
-    newTask.addEventListener("click", doneTask, false); //when task is clicked, doneTask function executes
+        newTask.addEventListener("click", doneTask, false); //when task is clicked, doneTask function executes
 
-    let deleteBtn = document.createElement("span"); // created "delete button"
-    deleteBtn.innerHTML = `&times;`; // "X" symbol for "delete button"
-    deleteBtn.classList.add("delete");
-    deleteBtn.addEventListener("click", deleteTask, false); // onclick deleteTask function executes
-    newTask.appendChild(deleteBtn); // "X" button is now in the list item
+        let deleteBtn = document.createElement("span"); // created "delete button"
+        deleteBtn.innerHTML = `&times;`; // "X" symbol for "delete button"
+        deleteBtn.classList.add("delete");
+        deleteBtn.addEventListener("click", deleteTask, false); // onclick deleteTask function executes
+        newTask.appendChild(deleteBtn); // "X" button is now in the list item
 
-    let tasks = document.getElementById("tasks");
-    tasks.appendChild(newTask); //adds new task, when it's printed
+        let tasks = document.getElementById("tasks");
+        tasks.appendChild(newTask); //adds new task, when it's printed
+    } else {
+        alert("Please, fill the empty blanks");
+    }
 }
 
 let btnAdd = document.getElementById("btnAdd");

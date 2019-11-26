@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-header, .head {
+header, .head, input {
     color: rgb(255, 255, 255);
     background-color: rgba(79, 123, 245, 0.918);
 }
@@ -27,8 +27,28 @@ header, .head, input, li {
     font-weight: 300;
 }
 
+input[type="text"], input[type="date"], input[type="time"] {
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-right: none;
+}
+
+input[type="button"] {
+    font-weight: 700;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+input[type="text"] {
+    transition: border 2s, color 2s;
+}
+
 input[type="text"]:focus {
-    background-color: yellow;
+    border: 2px solid rgb(15, 161, 113);
+    color:rgb(119, 0, 255);
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 
 label {
@@ -37,7 +57,7 @@ label {
 
 input {
     padding: 0.5rem;
-    text-align: center
+    text-align: center;
 }
 
 li:nth-child(odd) {
