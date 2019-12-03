@@ -47,3 +47,20 @@ function addTask(e) {
 let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", addTask, false);
 
+// clock in footer 
+function clockCalendar() {
+    let d = new Date();
+    let hour = d.getHours();
+    let minute = d.getMinutes();
+    let second = d.getSeconds();
+    let day = d.toDateString();
+    let today = document.getElementById("today");
+
+    hour = (hour < 10) ? hour = `0${hour}` : hour;
+    minute = (minute < 10) ? minute = `0${minute}` : minute;
+    second = (second < 10) ? second = `0${second}` : second;
+
+    today.innerText = `Right now is ${hour}:${minute}:${second}; ${day}`;
+}
+
+setInterval(clockCalendar, 1000);
