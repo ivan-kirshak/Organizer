@@ -2,7 +2,7 @@
 const organizerpwa = 'tdl-pwa-v1';
 const assets = [
     "/",
-    "tdl.html",
+    "index.html",
     "css/tdl.css",
     "js/tdl.js"
 ]
