@@ -3,5 +3,5 @@
     "background_color": "#ffffff",
     "display": "browser",
     "scope": "/",
-    "start_url": "index.html"
+    "start_url": "tdl.html"
 }
