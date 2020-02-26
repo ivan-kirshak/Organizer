@@ -64,3 +64,13 @@ function clockCalendar() {
 }
 
 setInterval(clockCalendar, 1000);
+
+// PWA functionality
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("pwa works correctly"))
+            .catch(err => console.log("pwa doesn't work correctly", err))
+    })
+}
