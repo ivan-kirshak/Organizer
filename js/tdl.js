@@ -46,6 +46,11 @@ function addTask(e) {
 
 let btnAdd = document.getElementById("btnAdd");
 btnAdd.addEventListener("click", addTask, false);
+document.body.addEventListener("keydown", function(e) {
+    if(e.key === "Enter") {
+        addTask();
+    }
+}, false);
 
 // clock in footer 
 function clockCalendar() {
