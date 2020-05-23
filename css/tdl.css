@@ -35,10 +35,14 @@ input[type="time"] {
   border-bottom: 2px solid rgb(255, 255, 255);
   border-right: none;
 }
-input[type="button"] {
+#btnAdd {
   font-weight: 700;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 25px;
+  padding: 1rem;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
 }
 input[type="text"] {
   transition: border 2s, color 2s;
