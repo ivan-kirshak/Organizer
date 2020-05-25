@@ -133,6 +133,11 @@ form .delete:hover {
     width: 80%;
     margin: 0 auto;
   }
+  form .taskname input .required,
+  form .start input .required,
+  form .finish input .required {
+    width: 100%;
+  }
   .footer > h1,
   li {
     font-size: 1rem;

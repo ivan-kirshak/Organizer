@@ -106,6 +106,10 @@ form {
     .finish {
       width: 80%;
       margin: 0 auto;
+
+      input .required {
+        width: 100%;
+      }
     }
   }
   .footer > h1,
