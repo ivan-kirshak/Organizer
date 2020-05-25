@@ -46,6 +46,7 @@ form input[type="time"] {
   border-bottom: 2px solid white;
   border-right: none;
   font-size: 100%;
+  background: transparent;
 }
 
 form #btnAdd {
