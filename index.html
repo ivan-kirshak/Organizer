@@ -14,28 +14,30 @@
 
 <body>
     <header>
-            <h1>Organizer</h1>
+        <h1>Organizer</h1>
     </header>
     <nav class="head">
-        <div class="taskname">
+        <form action="js/tdl.js">
+            <div class="taskname">
                 <label for="task">What are you going to do?</label>
                 <input type="text" name="task" id="task" class="required">
-        </div>
-        <div class="start">
-            <label for="date">When would you start it?</label>
-            <input type="date" name="datetime" id="datedaystart" class="required">
-            <label for="">at</label>
-            <input type="time" name="time-start" id="time-start" class="required">
-        </div>
-        <div class="finish">
+            </div>
+            <div class="start">
+                <label for="date">When would you start it?</label>
+                <input type="date" name="datetime" id="datedaystart" class="required">
+                <label for="">at</label>
+                <input type="time" name="time-start" id="time-start" class="required">
+            </div>
+            <div class="finish">
                 <label for="time">When shall you finish?</label>
                 <input type="date" name="datetime" id="datedayend" class="required">
                 <label for="">at</label>
                 <input type="time" name="time-end" id="time-end" class="required">
-        </div>
-        <div class="btn">
+            </div>
+            <div class="btn">
                 <button type="button" value="Add" id="btnAdd">Add</button>
-        </div>
+            </div>
+        </form>
     </nav>
     <ul id="tasks"></ul>
 

@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  text-align: center;
+}
+header,
+.head,
+input,
+.footer {
+  color: rgb(255, 255, 255);
+  background-color: rgba(79, 123, 245, 0.918);
+}
+
+form {
+  .head {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  div {
+    padding-top: 1rem;
+  }
+  header,
+  .head,
+  input,
+  li {
+    font-weight: 300;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="time"] {
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-right: none;
+  }
+  #btnAdd {
+    font-weight: 700;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 1rem;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type="text"] {
+    transition: border 2s, color 2s;
+  }
+  input[type="text"]:focus {
+    border: 2px solid rgb(15, 161, 113);
+    color: rgb(119, 0, 255);
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  label {
+    padding-top: 0.5rem;
+  }
+  input {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  li:nth-child(odd) {
+    background-color: rgba(19, 10, 143, 0.13);
+  }
+  li {
+    padding: 1rem;
+  }
+  .delete {
+    position: absolute;
+    right: 1rem;
+    color: black;
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.25rem;
+  }
+  .delete:hover {
+    background-color: red;
+  }
+}
+.time {
+  font-size: 0.75rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer > h1 {
+  text-align: center;
+}
+@media (max-width: 540px) {
+  form {
+    .head,
+    .taskname,
+    .start,
+    .finish {
+      display: flex;
+      flex-direction: column;
+    }
+    .taskname,
+    .start,
+    .finish {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .footer > h1,
+  li {
+    font-size: 1rem;
+  }
+}
