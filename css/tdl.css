@@ -45,6 +45,7 @@ form input[type="time"] {
   border-left: none;
   border-bottom: 2px solid white;
   border-right: none;
+  font-size: 100%;
 }
 
 form #btnAdd {
@@ -137,6 +138,10 @@ form .delete:hover {
   form .start input .required,
   form .finish input .required {
     width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1rem;
+    font-size: 100%;
   }
   .footer > h1,
   li {
